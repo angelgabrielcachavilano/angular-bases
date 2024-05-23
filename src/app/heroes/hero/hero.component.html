@@ -1,0 +1,26 @@
+<h1>{{name}}</h1>
+
+<dl>
+  <td>Nombre:</td>
+  <dd> {{name}} </dd>
+
+  <td>Edad:</td>
+  <dd> {{age}} </dd>
+
+  <td>Metodo:</td>
+  <dd> {{ getHeroDescription() }} </dd>
+
+  <td>Capitalizado:</td>
+  <dd> {{ capitalizedName }} </dd>
+  <!-- se puede usar los metodos get -->
+</dl>
+<!-- si se usa true en el ngif  muestra el boton, con false, lo elimina -->
+<button *ngIf=" name !== 'Spiderman' " class="btn btn-primary mx-2" (click)="changeName()">
+  cambiar nombre
+</button>
+<button *ngIf=" age !== 23" class="btn btn-primary " (click)="changeAge()">
+  cambiar edad
+</button>
+<button *ngIf=" age !== 45 && name !=='IronMan' " class="btn btn-primary " (click)="reset()">
+  reset
+</button>

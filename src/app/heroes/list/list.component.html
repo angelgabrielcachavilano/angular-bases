@@ -1,0 +1,19 @@
+<h1>Listado de Heroes</h1>
+
+<div *ngIf="deleteHero else nothingWasDeleted">
+  <h3>Heroe borrado: {{deleteHero}} <small class="text-danger"></small></h3>
+</div>
+
+<ng-template #nothingWasDeleted>
+  <!-- la forma en que se utiliza en el else se conoce como referencia local -->
+  <!-- el ng-template es como un div que no existe -->
+  <h3>No ha borrado nada</h3>
+</ng-template>
+
+
+
+<button *ngIf="heroes.length > 0" class="btn btn-outline-danger" (click)="removeLastHero()">borrar ultimo heroe</button>
+
+<ul class="mt-2 list-group">
+  <li *ngFor="let name of heroes" class="list-group-item">{{ name }}</li>
+</ul>

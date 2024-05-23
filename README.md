@@ -25,3 +25,38 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Apuntes
+
+---
+
+### Components
+
+---
+
+Usualmente es un archivo que está compuesto por
+una clase controladora escrita en TypeScript, un
+template HTML que puede estar separado y un archivo
+de CSS opcional. También se puede juntar con los
+archivos de pruebas.
+**ng g c [component name]** : crea un component
+
+### Directives - Directivas
+
+---
+
+Hay varios tipos de directivas, pero en sí, nos permiten
+cambiar el comportamiento de elementos HTML o
+componentes personalizados.
+
+### Modulos
+
+---
+
+Son contenedores para realizar la cohesion de código
+que tiene funcionamiento en común. Este
+funcionamiento común puede ser un flujo de trabajo,
+conjunto de capacidades o código dedicado a un
+dominio de la aplicación.
+
+**ng g m [module name]** : crea un modulo
