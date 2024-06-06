@@ -232,3 +232,23 @@ Se usa EventEmitten, es un generico para recibir desde un hijo informacion
 ```
 
 * **NOTA**: para debuggear se puede usar **debugger;**
+
+Este es un breve listado de los temas fundamentales:
+
+Generar build de producción
+
+Desplegarlo rápidamente
+
+Netlify
+
+GitHub Pages
+
+npm Scripts para automatizar el proceso
+
+Aquí aprenderemos como generar el build de producción de nuestra aplicación y la desplegaremos en la web.
+
+El proceso de despliegue en otros servidores es virtualmente el mismo, tomar nuestra carpeta DIST (que contiene la aplicación con archivos HTML, CSS y JS) y desplegarla mediante FTP (preferiblemente sFTP) en el hosting deseado
+
+ng build crea una carpeta de todo el proyecto minificado para poder hostearlo
+
+npm run build funciona igual que el ng build pero este lo crea usando el angular cli basado en el package.json
