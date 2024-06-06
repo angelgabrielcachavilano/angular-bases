@@ -252,3 +252,7 @@ El proceso de despliegue en otros servidores es virtualmente el mismo, tomar nue
 ng build crea una carpeta de todo el proyecto minificado para poder hostearlo
 
 npm run build funciona igual que el ng build pero este lo crea usando el angular cli basado en el package.json
+
+Despliegue el git, repositorio publico, rama main, referencia adocs, en el proyecto antes de subir sacar la carpeta browser de la carpeta dist al nivel mas alto y cambiarle el nombre a docs, dentro de esta cambiar en el href del index de docs el valor a **./**
+
+Para automatizar la subida al repositorio se hace lo siguiente, se instala del-cli y luego se crea scripts en packge,json, uno para agregar el ./ y el otro para borrar la carpeta docs, se usa **nmp run delete:docs**, esto se hace para que no acumule archivos, lo siguiente es copiar los directorios, se crea otro script para copiar lo de la carpeta browser dentro de dist y se lo pasa a una nueva llamada docs, el -f en el script de copiado es para que no copie la carpeta sino los archivos, luego para finalizar se crea un solo comando para ejecutar todos los comandos de una sola vez
